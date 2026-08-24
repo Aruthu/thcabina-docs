@@ -41,8 +41,8 @@ fonts and spacing; it does not touch your products or pages.
 ## 3. Tell the theme about your product options
 
 **This is the one step you must not skip.** THCabina never guesses which of your product options is
-the color and which is the size — guessing breaks as soon as a store uses another language or another
-naming habit. You declare it once, and every block reads it from there.
+the color and which is the size. Guessing breaks the moment a store runs in another language, or
+simply names its options differently. You declare it once, and every block reads it from there.
 
 Go to **Theme settings → Product options**:
 
@@ -74,7 +74,7 @@ theme follows what Shopify tells it.
 ## 4. Product metafields
 
 THCabina reads a small set of metafields in the `thcabina` namespace. All of them are optional: a
-product without them renders normally, just with fewer rows.
+product without them renders normally, just with fewer details on the page.
 
 | Metafield | Type | Where it shows |
 | --- | --- | --- |
@@ -93,8 +93,8 @@ need them.
 
 ## 5. Theme settings
 
-Everything presentational lives in **Theme settings**, so it travels when you copy your configuration
-to another storefront (see section 10).
+Everything that controls how the store looks lives in **Theme settings**, so it travels when you copy
+your configuration to another storefront (see section 10).
 
 **Colors.** Set the palette once and every page follows: background, surface (cards and panels),
 text, muted text, accent, and border. Colors are named by role, never by position, so an accent stays
@@ -115,7 +115,7 @@ product page, scrolled to the try-on slot. Turn it off if you have no try-on app
 
 ## 6. The product page
 
-Open a product in the theme editor. The page is made of one Product section plus two more below it.
+Open a product in the theme editor. The page is made of one Product section, plus two more sections below it.
 
 **Media layout** (a setting on the Product section):
 
@@ -135,7 +135,7 @@ through.
 | Rating | Star rating, from your reviews app |
 | Price | Price, compare-at price, volume discounts, subscription plans, taxes and unit price |
 | Buy buttons | Quantity selector, Add to cart, and accelerated checkout (Shop Pay, Apple Pay, Google Pay) |
-| Size chart | Opens the page in `thcabina.size_chart`, announced in the right measurement system |
+| Size chart | Opens the page you set in `thcabina.size_chart`, labeled with the right measurement system |
 | Accordion | Materials, care and fit rows, from the metafields above |
 | Badge | The text in `thcabina.badge` |
 | Description | The product description |
@@ -179,8 +179,8 @@ your analytics stay intact.
 **Search** has the same settings, plus predictive search in the header: products, collections, pages
 and articles suggested as the shopper types, on desktop and on mobile.
 
-**Cart** is a full page: quantities change in place, discounts are shown line by line, and shoppers
-can add to cart from anywhere without leaving the page they are on.
+**The cart** is a full page: quantities change in place, and discounts are shown line by line.
+Shoppers can also add to cart from anywhere in the store without leaving the page they are on.
 
 ## 9. Header, footer and the other pages
 
@@ -195,8 +195,9 @@ your admin.
 code and Apple Wallet), password and 404 are all built from sections you can add, reorder and remove.
 
 **Custom Liquid** — a section where you can paste your own Liquid or HTML if you need something the
-theme does not offer. Duplicate your theme before you experiment there: what you write in it is yours
-to maintain, and theme updates do not apply to code you have edited yourself.
+theme does not offer. What you put in it is yours to maintain and is not covered by theme support; if
+it breaks a page, empty the field and the page comes back. Theme updates still reach you normally:
+this is a setting, not an edit to the theme's code.
 
 **Five languages out of the box** — English, French, Italian, German and Spanish, for both the
 storefront and the theme editor. Add them under **Settings → Languages**.
@@ -211,8 +212,8 @@ To give a second storefront the same look:
 3. On the new storefront, install THCabina, open the same file, paste, and save.
 4. Reopen the theme editor to confirm the settings arrived.
 
-This copies theme settings — colors, fonts, layout, product options — because THCabina keeps all its
-presentational configuration there. It does not copy your sections' content, your products or your
+This copies theme settings — colors, fonts, layout, product options — because THCabina keeps all of
+its look-and-feel configuration there. It does not copy your sections' content, your products or your
 menus, which belong to each store.
 
 **Note on licensing:** Shopify licenses a theme to a single store. Plus merchants need a separate
@@ -236,7 +237,7 @@ and add its block to the product page (section 7).
 **My size chart does not show up.**
 Three things have to be true: the product has a `thcabina.size_chart` metafield pointing to a page,
 the size system is one the theme knows (`apparel` or `footwear`), and the Size chart block is on the
-page. If any is missing, the block renders nothing rather than a broken chart.
+page. If any of the three is missing, the block renders nothing rather than a broken chart.
 
 **Swatches are not appearing.**
 Check **Theme settings → Product options → Color option**: it must point at the option position that

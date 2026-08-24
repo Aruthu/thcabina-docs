@@ -8,8 +8,7 @@ title: Support policy
 This is the public support policy for the THCabina theme. It is linked from the theme's Theme Store
 listing and from the [theme guide](guide.html).
 
-**Contact:** [the support form](support.html)
-**Response time:** within two business days.
+**Contact:** [the support form](support.html) · **Response time:** within two business days.
 
 ---
 
@@ -19,8 +18,8 @@ Use the [contact form](support.html). It is the only supported channel: it colle
 we need to help you (your store URL, what you were doing, a screenshot), so the first reply is an
 answer rather than a request for details.
 
-Every request gets an automatic confirmation with a reference number. If you did not receive one
-within a few minutes, check your spam folder before writing again.
+Every request gets an automatic confirmation by email. If it has not arrived within a few minutes,
+check your spam folder before writing again.
 
 ## What we support
 
@@ -38,11 +37,11 @@ soon as we can reproduce them.
   work. We do not take on customization work, paid or unpaid.
 - **Themes you have edited.** If the theme's code has been modified, we can look at the problem, but
   we cannot support a copy we did not ship. Duplicate your theme before editing code.
-- **Third-party apps.** Including virtual try-on apps. THCabina provides the slot; the app is the
-  app vendor's product, and its behaviour, pricing and support are theirs. If an app block does not
-  render correctly *because of the theme*, that is a theme bug and we will fix it.
-- **Shopify itself.** Billing, plans, domains, payments, shipping, checkout. Shopify Support handles
-  those, and they are better at it than we are.
+- **Third-party apps**, virtual try-on apps included. THCabina provides the slot; the app is its
+  vendor's product, and its behavior, pricing and support are theirs. If an app block does not render
+  correctly *because of the theme*, that is a theme bug and we will fix it.
+- **Shopify itself.** Billing, plans, domains, payments, shipping and checkout are handled by
+  Shopify Support.
 - **Your store's content.** Products, images, copy, SEO, marketing.
 
 ## Before you write to us
@@ -52,8 +51,8 @@ Two checks that solve most reports:
 1. **Are your product options declared?** Theme settings → Product options. THCabina never guesses
    which option is the color and which is the size; blocks that depend on an undeclared option render
    nothing.
-2. **Is a try-on app installed?** The try-on area is empty by design until you add one. See section 1
-   of the theme guide.
+2. **Is a try-on app installed?** The try-on area is empty by design until you add one. See
+   [section 1 of the theme guide](guide.html#1-before-you-buy).
 
 ## Languages
 

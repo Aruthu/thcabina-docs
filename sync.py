@@ -19,8 +19,8 @@ PAGES = [
 
 REPLACEMENTS = [
     ("[[SUPPORT_FORM_URL]]", "support.html"),
-    ("(./support-policy.md)", "(support-policy.html)"),
-    ("(./merchant-guide.md)", "(guide.html)"),
+    ("./support-policy.md", "support-policy.html"),
+    ("./merchant-guide.md", "guide.html"),
 ]
 
 here = os.path.dirname(os.path.abspath(__file__))
