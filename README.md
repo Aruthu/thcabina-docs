@@ -40,11 +40,12 @@ Lo script aggiunge il front matter, riscrive i link `.md` in `.html` e sostituis
 Il form usa [FormSubmit](https://formsubmit.co): nessun backend, allegati e risposta automatica
 inclusi. Tre passi:
 
-1. In `support.html`, sostituire `[[SUPPORT_EMAIL]]` nell'attributo `action` con l'indirizzo che deve
-   ricevere le richieste.
-2. Inviare il form una prima volta: FormSubmit manda una mail di conferma a quell'indirizzo, e il
-   canale resta inattivo finché non si clicca il link. Da quel momento gli invii arrivano.
-3. Togliere il riquadro **"This form is not live yet."** in cima alla pagina.
+1. ~~Indirizzo nell'`action`~~ — fatto: `support@cabina.io`.
+2. **Confermare l'attivazione**: FormSubmit ha mandato una mail a `support@cabina.io` alla prima
+   richiesta. Finché non si clicca quel link, gli invii non arrivano.
+3. Togliere il riquadro **"This form is not live yet."** in cima alla pagina, e sostituire l'indirizzo
+   nell'`action` con l'**alias** che FormSubmit assegna dopo l'attivazione
+   (`https://formsubmit.co/el/<codice>`): fa la stessa cosa senza esporre la casella allo scraping.
 
 La risposta automatica è già scritta nel campo nascosto `_autoresponse` — è un requisito di
 ammissione al Theme Store, non un vezzo. Il testo di riferimento sta in
