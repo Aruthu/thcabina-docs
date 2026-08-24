@@ -1,0 +1,9 @@
+title: THCabina
+description: Documentation and support for the THCabina Shopify theme
+theme: jekyll-theme-minimal
+lang: en
+
+# Pagine tecniche fuori dal sito pubblicato
+exclude:
+  - README.md
+  - sync.py

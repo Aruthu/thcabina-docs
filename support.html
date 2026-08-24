@@ -1,0 +1,145 @@
+---
+layout: default
+title: Support
+---
+
+<h1>Support</h1>
+
+<p class="notice" role="status">
+  <strong>This form is not live yet.</strong> The THCabina support channel opens with the theme's
+  release on the Shopify Theme Store.
+</p>
+
+<p>
+  Questions about the theme, setup help and bug reports. We reply within two business days.
+  What is covered and what is not is set out in the <a href="support-policy.html">support policy</a>.
+</p>
+
+<p>Two checks that solve most reports, in case one of them is yours:</p>
+
+<ul>
+  <li>
+    <strong>Product options.</strong> In the theme editor, Theme settings &rarr; Product options:
+    THCabina needs to know which option position is your color and which is your size. Blocks that
+    depend on an undeclared option render nothing.
+    (<a href="guide.html#3-tell-the-theme-about-your-product-options">Guide, section 3</a>)
+  </li>
+  <li>
+    <strong>The try-on area is empty.</strong> That is by design until you install a virtual try-on
+    app and add its block to the product page.
+    (<a href="guide.html#7-adding-your-virtual-try-on-app">Guide, section 7</a>)
+  </li>
+</ul>
+
+<form action="https://formsubmit.co/[[SUPPORT_EMAIL]]" method="POST" enctype="multipart/form-data"
+      class="support-form">
+
+  <!-- FormSubmit configuration -->
+  <input type="hidden" name="_subject" value="THCabina support request">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/thanks.html">
+  <input type="hidden" name="_autoresponse"
+         value="Thanks for writing to THCabina support. We have your message and we reply within two business days. Two things that solve most reports: in the theme editor, Theme settings > Product options, THCabina needs to know which option position is your color and which is your size — blocks that depend on an undeclared option render nothing. And the try-on area stays empty by design until you install a virtual try-on app and add its block to the product page. Everything else in the theme works without any app. The theme guide is at https://aruthu.github.io/thcabina-docs/.">
+  <p class="hp" aria-hidden="true">
+    <label for="_honey">Leave this field empty</label>
+    <input type="text" name="_honey" id="_honey" tabindex="-1" autocomplete="off">
+  </p>
+
+  <p>
+    <label for="name">Full name <span aria-hidden="true">*</span></label>
+    <input type="text" id="name" name="name" autocomplete="name" required>
+  </p>
+
+  <p>
+    <label for="email">Email <span aria-hidden="true">*</span></label>
+    <input type="email" id="email" name="email" autocomplete="email" required
+           aria-describedby="email-hint">
+    <span class="hint" id="email-hint">This is where we reply.</span>
+  </p>
+
+  <p>
+    <label for="store">Store URL <span aria-hidden="true">*</span></label>
+    <input type="text" id="store" name="store URL" required placeholder="www.storename.myshopify.com"
+           aria-describedby="store-hint">
+    <span class="hint" id="store-hint">Example: www.storename.myshopify.com</span>
+  </p>
+
+  <p>
+    <label for="message">Describe the problem <span aria-hidden="true">*</span></label>
+    <textarea id="message" name="message" rows="8" required aria-describedby="message-hint"></textarea>
+    <span class="hint" id="message-hint">What you did, what you expected, what happened instead.</span>
+  </p>
+
+  <p>
+    <label for="attachment">Screenshot or file</label>
+    <input type="file" id="attachment" name="attachment" accept="image/*,.pdf"
+           aria-describedby="attachment-hint">
+    <span class="hint" id="attachment-hint">Optional. Images and PDF.</span>
+  </p>
+
+  <p><button type="submit">Send</button></p>
+
+  <p class="hint"><span aria-hidden="true">*</span> Required.</p>
+</form>
+
+<style>
+  .notice {
+    border: 1px solid #d0d0d0;
+    border-inline-start: 4px solid #7a1e2d;
+    padding: 0.75rem 1rem;
+    background: #faf8f5;
+  }
+  .support-form {
+    max-inline-size: 40rem;
+  }
+  .support-form label {
+    display: block;
+    font-weight: 600;
+    margin-block-end: 0.25rem;
+  }
+  .support-form input[type="text"],
+  .support-form input[type="email"],
+  .support-form textarea {
+    inline-size: 100%;
+    box-sizing: border-box;
+    padding: 0.6rem;
+    font: inherit;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #fff;
+    color: #1a1815;
+  }
+  .support-form input[type="file"] {
+    font: inherit;
+    padding: 0.4rem 0;
+  }
+  .support-form .hint {
+    display: block;
+    font-size: 0.875rem;
+    color: #5c5750;
+    margin-block-start: 0.25rem;
+  }
+  .support-form button {
+    font: inherit;
+    min-block-size: 44px;
+    min-inline-size: 8rem;
+    padding: 0.6rem 1.5rem;
+    border: 0;
+    border-radius: 4px;
+    background: #7a1e2d;
+    color: #fff;
+    cursor: pointer;
+  }
+  .support-form :focus-visible {
+    outline: 2px solid #1a1815;
+    outline-offset: 2px;
+  }
+  .hp {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+</style>
