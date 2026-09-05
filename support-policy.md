@@ -3,9 +3,9 @@ layout: default
 title: Support policy
 ---
 
-# Sole — Support policy
+# Solea — Support policy
 
-This is the public support policy for the Sole theme. It is linked from the theme's Theme Store
+This is the public support policy for the Solea theme. It is linked from the theme's Theme Store
 listing and from the [theme guide](guide.html).
 
 **Contact:** [the support form](https://aruthu.github.io/thcabina-docs/support.html) · **Response time:** within two business days.
@@ -37,7 +37,7 @@ soon as we can reproduce them.
   work. We do not take on customization work, paid or unpaid.
 - **Themes you have edited.** If the theme's code has been modified, we can look at the problem, but
   we cannot support a copy we did not ship. Duplicate your theme before editing code.
-- **Third-party apps**, virtual try-on apps included. Sole provides the slot; the app is its
+- **Third-party apps**, virtual try-on apps included. Solea provides the slot; the app is its
   vendor's product, and its behavior, pricing and support are theirs. If an app block does not render
   correctly *because of the theme*, that is a theme bug and we will fix it.
 - **Shopify itself.** Billing, plans, domains, payments, shipping and checkout are handled by
@@ -48,7 +48,7 @@ soon as we can reproduce them.
 
 Two checks that solve most reports:
 
-1. **Are your product options declared?** Theme settings → Product options. Sole never guesses
+1. **Are your product options declared?** Theme settings → Product options. Solea never guesses
    which option is the color and which is the size; blocks that depend on an undeclared option render
    nothing.
 2. **Is a try-on app installed?** The try-on area is empty by design until you add one. See
@@ -60,5 +60,5 @@ Support is provided in English and Italian.
 
 ## Scope of this policy
 
-This policy covers the Sole theme as distributed through the Shopify Theme Store. Shopify
+This policy covers the Solea theme as distributed through the Shopify Theme Store. Shopify
 licenses a theme to a single store; Shopify Plus merchants need one license per storefront.

@@ -3,22 +3,22 @@ layout: default
 title: Theme guide
 ---
 
-# Sole — Theme guide
+# Solea — Theme guide
 
-Everything you need to set up Sole, in the order you will need it.
+Everything you need to set up Solea, in the order you will need it.
 Written for merchants: no code required at any step.
 
-Theme version **1.0.0** · Preset **Sole** · [Support](https://aruthu.github.io/thcabina-docs/support.html)
+Theme version **1.0.0** · Preset **Solea** · [Support](https://aruthu.github.io/thcabina-docs/support.html)
 
 ---
 
 ## 1. Before you buy
 
-**Sole is built for stores that let shoppers try items on.** The product page has a dedicated
+**Solea is built for stores that let shoppers try items on.** The product page has a dedicated
 place — a *try-on slot* — where you install the virtual try-on app of your choice, and product cards
 can carry a try-on button that takes the shopper straight to it.
 
-**The slot is a place for an app, not an app itself.** Sole does not include a virtual try-on
+**The slot is a place for an app, not an app itself.** Solea does not include a virtual try-on
 app, and it is not tied to any particular one.
 
 **The app is bought separately.** The try-on app used on the demo store is **Cabina**, built by the
@@ -38,16 +38,16 @@ a complete store — you are simply not using the feature the theme is named for
 ## 2. Install the theme and apply the preset
 
 1. In your Shopify admin, go to **Online Store → Themes**.
-2. Find Sole in your theme library and click **Customize**.
-3. The theme ships with one preset, **Sole**, tuned for apparel. It is applied when you install
+2. Find Solea in your theme library and click **Customize**.
+3. The theme ships with one preset, **Solea**, tuned for apparel. It is applied when you install
    the theme, so what you see on a new store is what you saw in the demo.
 
-To start over at any point, re-apply the Sole preset from the theme editor. This resets colors,
+To start over at any point, re-apply the Solea preset from the theme editor. This resets colors,
 fonts and spacing; it does not touch your products or pages.
 
 ## 3. Tell the theme about your product options
 
-**This is the one step you must not skip.** Sole never guesses which of your product options is
+**This is the one step you must not skip.** Solea never guesses which of your product options is
 the color and which is the size. Guessing breaks the moment a store runs in another language, or
 simply names its options differently. You declare it once, and every block reads it from there.
 
@@ -91,7 +91,7 @@ first on the product, then on the store.
 ### Color swatches
 
 Swatches come from Shopify's own option values. In **Settings → Products → Options**, give each color
-value a swatch (a color or an image). Sole renders whatever you set there — there is no separate
+value a swatch (a color or an image). Solea renders whatever you set there — there is no separate
 swatch list to maintain in the theme.
 
 ### Selling a color as its own product (combined listings)
@@ -108,7 +108,7 @@ the worn one, with a slider between them — and a dedicated thumbnail. Leave it
 opens on the main photo as usual. On phones the gallery is swiped: one photo per swipe, a `1 / 6`
 counter in the corner, and the thumbnails underneath still jump to any photo.
 
-Sole reads a small set of metafields in the `thcabina` namespace. All of them are optional: a
+Solea reads a small set of metafields in the `thcabina` namespace. All of them are optional: a
 product without them renders normally, just with fewer details on the page.
 
 | Metafield | Type | Where it shows |
@@ -130,7 +130,7 @@ your shirts and your sneakers announce their own measurements on the same storef
 To create them: **Settings → Custom data → Products → Add definition**, using exactly the names
 above. Then fill them in on each product, in the Metafields area at the bottom of the product page.
 
-Metafields belonging to your apps stay with those apps. Sole does not read them, and does not
+Metafields belonging to your apps stay with those apps. Solea does not read them, and does not
 need them.
 
 ## 5. Theme settings
@@ -257,10 +257,10 @@ To give a second storefront the same look:
 1. On the configured storefront, open **Online Store → Themes → ⋯ → Edit code** and open
    `config/settings_data.json`.
 2. Copy its contents.
-3. On the new storefront, install Sole, open the same file, paste, and save.
+3. On the new storefront, install Solea, open the same file, paste, and save.
 4. Reopen the theme editor to confirm the settings arrived.
 
-This copies theme settings — colors, fonts, layout, product options — because Sole keeps all of
+This copies theme settings — colors, fonts, layout, product options — because Solea keeps all of
 its look-and-feel configuration there. It does not copy your sections' content, your products or your
 menus, which belong to each store.
 
@@ -286,7 +286,7 @@ what you changed.
 ## 12. FAQ
 
 **The try-on area is empty. Is the theme broken?**
-No. Sole provides the place; the try-on app provides the feature. Install a virtual try-on app
+No. Solea provides the place; the try-on app provides the feature. Install a virtual try-on app
 and add its block to the product page (section 7).
 
 **My size chart does not show up.**
@@ -304,7 +304,7 @@ No. Shopify carries your settings over for themes installed from the Theme Store
 installs itself or waits for your approval. The exception is a theme whose code you edited yourself:
 that copy stops receiving updates.
 
-**Can I use Sole on more than one store?**
+**Can I use Solea on more than one store?**
 Each store needs its own license. See section 10.
 
 **Which languages are included?**
