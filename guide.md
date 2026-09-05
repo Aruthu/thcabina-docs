@@ -3,23 +3,30 @@ layout: default
 title: Theme guide
 ---
 
-# THCabina — Theme guide
+# Sole — Theme guide
 
-Everything you need to set up THCabina, in the order you will need it.
+Everything you need to set up Sole, in the order you will need it.
 Written for merchants: no code required at any step.
 
-Theme version **1.0.0** · Preset **THCabina** · [Support](support.html)
+Theme version **1.0.0** · Preset **Sole** · [Support](https://aruthu.github.io/thcabina-docs/support.html)
 
 ---
 
 ## 1. Before you buy
 
-**THCabina is built for stores that let shoppers try items on.** The product page has a dedicated
+**Sole is built for stores that let shoppers try items on.** The product page has a dedicated
 place — a *try-on slot* — where you install the virtual try-on app of your choice, and product cards
 can carry a try-on button that takes the shopper straight to it.
 
-**The slot is a place for an app, not an app itself.** THCabina does not include a virtual try-on
-app, and it is not tied to any particular one. Until you install one:
+**The slot is a place for an app, not an app itself.** Sole does not include a virtual try-on
+app, and it is not tied to any particular one.
+
+**The app is bought separately.** The try-on app used on the demo store is **Cabina**, built by the
+same author as this theme — but it is a separate product on its own subscription, billed by the app
+and not covered by your theme purchase. The slot is an open standard place: any virtual try-on app
+that ships a theme app block drops into it, and you are free to use another one, or none.
+
+Until you install one:
 
 - the try-on area on the product page stays empty, and
 - the try-on button does not appear on product cards.
@@ -31,16 +38,16 @@ a complete store — you are simply not using the feature the theme is named for
 ## 2. Install the theme and apply the preset
 
 1. In your Shopify admin, go to **Online Store → Themes**.
-2. Find THCabina in your theme library and click **Customize**.
-3. The theme ships with one preset, **THCabina**, tuned for apparel. It is applied when you install
+2. Find Sole in your theme library and click **Customize**.
+3. The theme ships with one preset, **Sole**, tuned for apparel. It is applied when you install
    the theme, so what you see on a new store is what you saw in the demo.
 
-To start over at any point, re-apply the THCabina preset from the theme editor. This resets colors,
+To start over at any point, re-apply the Sole preset from the theme editor. This resets colors,
 fonts and spacing; it does not touch your products or pages.
 
 ## 3. Tell the theme about your product options
 
-**This is the one step you must not skip.** THCabina never guesses which of your product options is
+**This is the one step you must not skip.** Sole never guesses which of your product options is
 the color and which is the size. Guessing breaks the moment a store runs in another language, or
 simply names its options differently. You declare it once, and every block reads it from there.
 
@@ -59,10 +66,32 @@ two settings.
 **If you leave an option set to None, the blocks that depend on it render nothing.** That is
 deliberate: an empty area is better than a wrong swatch.
 
+### If some products are set up differently
+
+These two settings are the **store default**. Option positions are fixed when a product is created,
+so a catalog that grew over time — or one that sells clothing **and** shoes — usually has a few
+products that disagree: Size is Option 1 on your shirts and Option 2 on your sneakers.
+
+You override the default on those products, and only on those:
+
+| Metafield | Type | What it says |
+| --- | --- | --- |
+| `thcabina.color_option` | Integer, 0 to 3 | Which option position holds the color **on this product** |
+| `thcabina.size_option` | Integer, 0 to 3 | Which option position holds the size **on this product** |
+
+Create them the same way as the metafields in section 4, as **Integer** with a minimum of 0 and a
+maximum of 3, then fill them in from **Bulk edit** on the products that need it. `0` means "this
+product has no option with that meaning", and the theme renders nothing for it — the same as setting
+the theme setting to None.
+
+Products without the metafield keep using the store default, so a catalog that is already consistent
+needs none of this. The theme still never guesses from the option names: it reads what you declared,
+first on the product, then on the store.
+
 ### Color swatches
 
 Swatches come from Shopify's own option values. In **Settings → Products → Options**, give each color
-value a swatch (a color or an image). THCabina renders whatever you set there — there is no separate
+value a swatch (a color or an image). Sole renders whatever you set there — there is no separate
 swatch list to maintain in the theme.
 
 ### Selling a color as its own product (combined listings)
@@ -73,7 +102,13 @@ theme follows what Shopify tells it.
 
 ## 4. Product metafields
 
-THCabina reads a small set of metafields in the `thcabina` namespace. All of them are optional: a
+**Worn photo.** Add a file metafield `thcabina.worn_image` (type: File, one image) with a photo of
+the product worn. The product gallery then opens on a before/after frame — the main photo against
+the worn one, with a slider between them — and a dedicated thumbnail. Leave it empty and the gallery
+opens on the main photo as usual. On phones the gallery is swiped: one photo per swipe, a `1 / 6`
+counter in the corner, and the thumbnails underneath still jump to any photo.
+
+Sole reads a small set of metafields in the `thcabina` namespace. All of them are optional: a
 product without them renders normally, just with fewer details on the page.
 
 | Metafield | Type | Where it shows |
@@ -84,11 +119,18 @@ product without them renders normally, just with fewer details on the page.
 | `thcabina.badge` | Single line text | The Badge block, and the badge on product cards |
 | `thcabina.size_chart` | Page reference | The page opened by the Size chart block |
 | `thcabina.size_system` | Single line text (`apparel` or `footwear`) | Which measurements the size chart announces |
+| `thcabina.color_option` | Integer, 0 to 3 | Overrides the store default for this product — see section 3 |
+| `thcabina.size_option` | Integer, 0 to 3 | Overrides the store default for this product — see section 3 |
+
+`thcabina.size_system` is the one to fill in as soon as you sell two categories. The theme setting in
+section 3 is only the fallback: set the metafield to `footwear` on every shoe, and
+your shirts and your sneakers announce their own measurements on the same storefront. Pair it with
+`thcabina.size_chart`, which is per product too, so each one opens its own size guide page.
 
 To create them: **Settings → Custom data → Products → Add definition**, using exactly the names
 above. Then fill them in on each product, in the Metafields area at the bottom of the product page.
 
-Metafields belonging to your apps stay with those apps. THCabina does not read them, and does not
+Metafields belonging to your apps stay with those apps. Sole does not read them, and does not
 need them.
 
 ## 5. Theme settings
@@ -182,6 +224,12 @@ and articles suggested as the shopper types, on desktop and on mobile.
 **The cart** is a full page: quantities change in place, and discounts are shown line by line.
 Shoppers can also add to cart from anywhere in the store without leaving the page they are on.
 
+**Free shipping bar.** Under **Theme settings → Cart → Free shipping threshold**, enter the amount
+(in your store currency) above which you ship for free. The cart and the cart drawer then show how
+much is still missing, with a progress bar, and a confirmation once the threshold is reached. Leave
+the field empty to hide the bar. The bar does not show to shoppers paying in another currency, where
+the comparison would be wrong.
+
 ## 9. Header, footer and the other pages
 
 **Header** — logo, main menu with multi-level dropdowns, customer account menu, cart count and
@@ -209,10 +257,10 @@ To give a second storefront the same look:
 1. On the configured storefront, open **Online Store → Themes → ⋯ → Edit code** and open
    `config/settings_data.json`.
 2. Copy its contents.
-3. On the new storefront, install THCabina, open the same file, paste, and save.
+3. On the new storefront, install Sole, open the same file, paste, and save.
 4. Reopen the theme editor to confirm the settings arrived.
 
-This copies theme settings — colors, fonts, layout, product options — because THCabina keeps all of
+This copies theme settings — colors, fonts, layout, product options — because Sole keeps all of
 its look-and-feel configuration there. It does not copy your sections' content, your products or your
 menus, which belong to each store.
 
@@ -221,8 +269,15 @@ theme license for each storefront where the theme is used.
 
 ## 11. Updates
 
-Shopify installs theme updates for you and carries your customizations over automatically. What each
-version changed is in the release notes on the theme's Theme Store page.
+Most updates install themselves: Shopify replaces your published theme with the new version and
+carries your customizations over — layout, section and block order, settings, images and text. You do
+not have to do anything.
+
+Some updates need your approval first. Shopify shows a notice on **Online store → Themes**, adds the
+new version as an unpublished theme, and you publish it once you have looked it over. This happens
+when an update changes something that cannot be carried over silently.
+
+What each version changed is in the release notes on the theme's Theme Store page.
 
 If you have edited the theme's code yourself, updates do not apply to your copy — that is Shopify's
 rule for every theme, not just this one. Duplicate your theme before editing code, and keep a note of
@@ -231,7 +286,7 @@ what you changed.
 ## 12. FAQ
 
 **The try-on area is empty. Is the theme broken?**
-No. THCabina provides the place; the try-on app provides the feature. Install a virtual try-on app
+No. Sole provides the place; the try-on app provides the feature. Install a virtual try-on app
 and add its block to the product page (section 7).
 
 **My size chart does not show up.**
@@ -245,9 +300,11 @@ actually holds the color, and that option's values must have swatches assigned i
 **Settings → Products → Options**.
 
 **Will I lose my customizations when the theme updates?**
-No. Shopify carries settings over automatically for themes installed from the Theme Store.
+No. Shopify carries your settings over for themes installed from the Theme Store, whether the update
+installs itself or waits for your approval. The exception is a theme whose code you edited yourself:
+that copy stops receiving updates.
 
-**Can I use THCabina on more than one store?**
+**Can I use Sole on more than one store?**
 Each store needs its own license. See section 10.
 
 **Which languages are included?**
@@ -256,7 +313,7 @@ English, French, Italian, German and Spanish. You can add or edit any translatio
 
 ## 13. Support
 
-Questions about the theme, setup help and bug reports: **[contact us](support.html)**.
+Questions about the theme, setup help and bug reports: **[contact us](https://aruthu.github.io/thcabina-docs/support.html)**.
 
 We reply within two business days. What is covered and what is not is set out in the
 [support policy](support-policy.html).
